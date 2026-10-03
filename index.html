@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>견적핏 · 견적 검토</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#workspace">본문으로 이동</a>
+  <aside class="sidebar" aria-label="견적 관리">
+    <a href="/" class="brand" aria-label="견적핏 홈"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect x="3" y="3" width="26" height="26" rx="6" fill="currentColor"/><path d="m9 16 5 5 10-11" fill="none" stroke="#102a33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>견적핏</a>
+    <p class="brand-note">견적·발주 조건 재검증</p>
+    <div class="nav-current">견적 검토</div>
+    <section class="history-section">
+      <h2>저장된 견적 <span id="history-count">0</span></h2>
+      <div id="history" class="history"><p class="sidebar-muted">완성한 초안이 여기에 저장돼요.</p></div>
+    </section>
+    <div class="sidebar-bottom"><strong>가상 업무 시연</strong><p>기업 데이터 연동·외부 발송·재고 예약 없이 작동합니다.</p></div>
+  </aside>
+  <main id="workspace">
+    <header class="page-header">
+      <div><h1>견적 검토</h1><p>가격과 납기를 확인하고, 바뀐 조건을 다시 검증하세요.</p></div>
+      <span id="ai-health" class="badge neutral">AI 연결 확인 중</span>
+    </header>
+    <div class="clock-strip">
+      <label for="day">시연 시점</label><select id="day"><option value="0">영업일 0 · 최초 견적</option><option value="4">영업일 4 · 발주 재검증</option><option value="7">영업일 7 · 유효기간 만료</option></select>
+      <span>납기는 주문 확정 예정 시점부터 경과 영업일로 계산합니다.</span>
+    </div>
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+    <div class="mobile-history"><label for="saved-quote">저장된 견적</label><select id="saved-quote"><option value="">견적 선택</option></select></div>
+    <div class="work-grid">
+      <div class="work-main">
+        <section class="input-section" aria-labelledby="input-title">
+          <div class="section-heading"><h2 id="input-title">요청 내용</h2><span id="source-label" class="muted">메일·텍스트 입력</span></div>
+          <div class="sample-actions"><button id="sample-rfq" type="button" class="secondary">최초 요청 불러오기</button><button id="sample-order" type="button" class="secondary">발주 변경 불러오기</button><button id="revalidate" type="button" class="secondary" hidden>현재 조건 재검증</button><label class="file-button secondary" for="upload">PDF·TXT 불러오기<input id="upload" type="file" accept=".pdf,.txt,text/plain,application/pdf"></label></div>
+          <form id="run-form">
+            <div class="form-row"><div class="field"><label for="kind">업무 단계</label><select id="kind"><option value="rfq">새 견적 요청</option><option value="order">기존 견적의 발주 변경</option></select></div><div class="field"><label for="mode">검증 방식</label><select id="mode"><option value="ai">로컬 AI 판단 + 계산 도구</option><option value="rules">규칙 모드 · AI 사용 안 함</option></select></div></div>
+            <label for="request" class="input-label">견적 요청서 또는 메일 내용</label>
+            <textarea id="request" name="request" rows="9" spellcheck="false" required aria-describedby="request-limit" placeholder="고객이 보낸 품목·수량·재질·도면번호·개정·희망 납기를 입력하세요."></textarea>
+            <p id="request-limit" class="muted" aria-live="polite">요청 텍스트는 UTF-8 기준 5MiB 이하입니다. 파일도 5MiB 이하만 지원합니다.</p>
+            <div id="confirmation" class="confirmation" hidden><h3>필수 사양을 확인해 주세요</h3><p>원문에 없는 값은 담당자가 확인한 뒤 입력합니다.</p><div id="missing-fields"></div></div>
+            <div class="run-footer"><p id="run-hint">제공된 가상 품목 10개와 P01 수량 10→20 변경 형식으로 시연합니다.</p><button id="run-button" class="primary" type="submit">검증 시작 <span aria-hidden="true">→</span></button></div>
+          </form>
+        </section>
+        <section id="results" class="results" aria-labelledby="result-title">
+          <div class="section-heading"><h2 id="result-title">검토 결과</h2><span id="version-label" class="muted"></span></div>
+          <div id="empty-result" class="empty-result"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M12 7h18l7 7v27H12zM30 7v8h7M18 22h13M18 28h13M18 34h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>약속할 수 있는 조건인지 확인하세요</h3><p>요청을 검증하면 가격·납기와 근거를 함께 보여드립니다.<br>조건이 맞지 않으면 가능한 대안을 다시 확인합니다.</p></div>
+          <div id="result-content" hidden></div>
+        </section>
+      </div>
+      <aside class="execution" aria-labelledby="execution-title">
+        <div class="section-heading"><h2 id="execution-title">Agent 작업 기록</h2><span id="log-count" class="muted">0</span></div>
+        <p class="execution-note">계획 → 도구 실행 → 결과 확인 → 재계획</p>
+        <ol id="logs" class="logs"><li class="log-empty">검증을 시작하면 실제 실행 기록이 표시됩니다.</li></ol>
+      </aside>
+    </div>
+    <footer class="page-footer">주제 02 · 업무혁신·생산성 향상 <span>시연 결과는 실제 기업의 납기·공급 가능성을 보장하지 않습니다.</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-03",
+  "scope": "public source derived from final selected submission; product code and tests unchanged; excludes DB, private documents, runtime and model weights",
+  "sha256": {
+    ".gitignore": "dd2ec02060424fab9763af101c204c9fca9778d682e17e709e49319794b6098e",
+    "FINAL_VERIFICATION.md": "21701859048b3b5a3396c9333d8415dd0a503211ba4da24f121aaa90659bf7b6",
+    "README.md": "816710a3b13ad5c89ca1c9ef33376944da19f99e63006185d30af4366c1b1a23",
+    "THIRD_PARTY_NOTICES.md": "7b46f55ced94e42ee0046cee4fcf13dbaad43a835067c8aecaefcec885d0a3b9",
+    "app.js": "05c930705e7d9853b903f9b33633a208718d98e4ff2cf5957a5db33c607e00c5",
+    "core.py": "7c56a6a54f58dfbe2970395e31397ee0cce90b236385a63507d41b9310c5e3bc",
+    "index.html": "ea8d6a90cff3a3c62e1ed2388153a8c29d3046c7686c1f20215997783a428b9b",
+    "licenses/NanumGothic-OFL.txt": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f",
+    "licenses/Ollama-MIT.txt": "5934ed2ce0d15154bcdb9c85203210abac0da4314af34081e36df4599f90b226",
+    "licenses/Qwen3-Apache-2.0.txt": "d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+    "licenses/pypdf-6.10.0-LICENSE.txt": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524",
+    "output/pdf/견적핏_가상견적요청.pdf": "8b7930006270516e3e5e09dd3de55419754f63324ed42a15b4a7b575982775bd",
+    "requirements.txt": "8cdfa852c2b5ed1d000d9983bc34cdc18af578ef70a0b4d0dfe5ecce27f10f79",
+    "server.py": "9b7f400074bf8c5aa490d423d4541546dca65ad498b185291472009cb4a72a72",
+    "style.css": "e5c80f6a49c7308f7c21c023c1c24bf940d5740d7fe8200091f9c43ee94e8c21",
+    "test_core.py": "9fe9db7a14f1bd0d8c0666ceb7e14a624a24dfca617aa34ea15579aa71596f2d",
+    "시연자료/01_견적요청.txt": "9328fa9710947a2c9cf1c511aff68a36a4f1c2e67ad89cd2c3694c5d27d6f0e8",
+    "시연자료/02_발주변경요청.txt": "2fb098ffbc8482f2ab305d12afd2ae8f583b60c90e2f751c886637543950af27",
+    "시연자료/가상_회사데이터.json": "bd71095f7fd4d3d10582eb100c7c81a0453e65709a77863cb1cee3cccc1ecea7",
+    "실행.command": "d6e6e249ac65fee59d3f5d00e446a784a1f726b68927671cea482412776556fc"
+  }
+}

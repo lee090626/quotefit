@@ -1,0 +1,457 @@
+{
+  "data_kind": "fictional_demo",
+  "currency": "KRW",
+  "vat_included": false,
+  "time_unit": "elapsed_business_day",
+  "day_origin": "planned_order_acceptance_start",
+  "rules": {
+    "price_markup_numerator": 5,
+    "price_markup_denominator": 4,
+    "quote_valid_business_days": 3,
+    "quote_expired_at_or_after_elapsed_days": 3,
+    "allowed_alternative_count": 2,
+    "replan_limit": 2,
+    "inventory_reservation_performed": false,
+    "standard_cost_applies_to_all_units": true,
+    "unsupported_quantity_requires_confirmation": true
+  },
+  "snapshots": [
+    {
+      "snapshot_id": "S1",
+      "observed_at_simulation_business_day": 0,
+      "valid_for_business_days": 3,
+      "shared_inspection_shipping_capacity_confirmed": true,
+      "records": [
+        {
+          "item_code": "P01",
+          "item_name": "브래킷",
+          "drawing_id": "DEMO-P01",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P01",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 8000,
+          "supported_quantities": [
+            10,
+            20
+          ],
+          "available_blank_count": 12,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P02",
+          "item_name": "스페이서",
+          "drawing_id": "DEMO-P02",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P02",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 6000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P03",
+          "item_name": "플레이트",
+          "drawing_id": "DEMO-P03",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P03",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 10000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P04",
+          "item_name": "부싱",
+          "drawing_id": "DEMO-P04",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P04",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 5000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P05",
+          "item_name": "하우징",
+          "drawing_id": "DEMO-P05",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P05",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 12000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P06",
+          "item_name": "커버",
+          "drawing_id": "DEMO-P06",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P06",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 7000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P07",
+          "item_name": "샤프트",
+          "drawing_id": "DEMO-P07",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P07",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 9000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P08",
+          "item_name": "지그 블록",
+          "drawing_id": "DEMO-P08",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P08",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 11000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P09",
+          "item_name": "와셔",
+          "drawing_id": "DEMO-P09",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P09",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 4000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P10",
+          "item_name": "베이스",
+          "drawing_id": "DEMO-P10",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P10",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 8000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S2",
+      "observed_at_simulation_business_day": 4,
+      "valid_for_business_days": 3,
+      "shared_inspection_shipping_capacity_confirmed": true,
+      "records": [
+        {
+          "item_code": "P01",
+          "item_name": "브래킷",
+          "drawing_id": "DEMO-P01",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P01",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 9600,
+          "supported_quantities": [
+            10,
+            20
+          ],
+          "available_blank_count": 12,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 4,
+          "production_ready_elapsed_days": 3,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P02",
+          "item_name": "스페이서",
+          "drawing_id": "DEMO-P02",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P02",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 6000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P03",
+          "item_name": "플레이트",
+          "drawing_id": "DEMO-P03",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P03",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 10000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P04",
+          "item_name": "부싱",
+          "drawing_id": "DEMO-P04",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P04",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 5000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P05",
+          "item_name": "하우징",
+          "drawing_id": "DEMO-P05",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P05",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 12000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P06",
+          "item_name": "커버",
+          "drawing_id": "DEMO-P06",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P06",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 7000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P07",
+          "item_name": "샤프트",
+          "drawing_id": "DEMO-P07",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P07",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 9000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P08",
+          "item_name": "지그 블록",
+          "drawing_id": "DEMO-P08",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P08",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 11000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P09",
+          "item_name": "와셔",
+          "drawing_id": "DEMO-P09",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P09",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 4000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        },
+        {
+          "item_code": "P10",
+          "item_name": "베이스",
+          "drawing_id": "DEMO-P10",
+          "revision": "A",
+          "material": "AL6061",
+          "stock_key": "BLANK-P10",
+          "quantity_unit": "개",
+          "approved_unit_cost_krw": 8000,
+          "supported_quantities": [
+            10
+          ],
+          "available_blank_count": 100,
+          "blank_count_per_unit": 1,
+          "normal_material_ready_elapsed_days": 0,
+          "production_ready_elapsed_days": 2,
+          "machining_elapsed_days": 2,
+          "inspection_shipping_elapsed_days": 1,
+          "capacity_confirmed": true
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    {
+      "alternative_id": "RUSH-OUTSOURCE-P01",
+      "snapshot_id": "S2",
+      "item_code": "P01",
+      "supported_quantity": 20,
+      "same_specification_confirmed": true,
+      "available_blank_count": 20,
+      "material_ready_elapsed_days": 2,
+      "production_ready_elapsed_days": 2,
+      "machining_elapsed_days": 2,
+      "inspection_shipping_elapsed_days": 1,
+      "rush_extra_total_krw": 16000,
+      "outsourcing_extra_total_krw": 32000,
+      "capacity_confirmed": true,
+      "supplier_terms_confirmed_in_fictional_data": true,
+      "reservation_performed": false
+    }
+  ]
+}
